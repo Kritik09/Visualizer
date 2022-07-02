@@ -63,10 +63,16 @@ h1{
     display: none;
 }
 .start__button{
-    font-size: 2.25vw;
+    font-size: 2vw;
+}
+.start__button:hover{
+    cursor: pointer;
 }
 .reset__button{
-    font-size: 2.25vw;
+    font-size: 2vw;
+}
+.reset__button:hover{
+    cursor: pointer;
 }
 @media (max-width:750px) {
     nav{
