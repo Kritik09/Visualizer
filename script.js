@@ -90,7 +90,6 @@ function start(){
         arr[i]=dummy[i]
     }
     let algorithm=document.getElementById("algorithm").value
-    console.log(algorithm)
     if(algorithm=="bubble"){
         bubbleSort()
     }
@@ -108,6 +107,9 @@ function start(){
     }
     if(algorithm=="selection"){
         selectionSort()
+    }
+    if(algorithm=="rQuick"){
+        randomizedQuickSort(0,size-1)
     }
     stop=false
     window.requestAnimationFrame(main)
@@ -172,6 +174,16 @@ function quickSort(l,r){
         let pvt=pivot(l,r)
         quickSort(l,pvt-1)
         quickSort(pvt+1,r)
+    }
+}
+function randomizedQuickSort(l,r){
+    if(l<r){
+        let i=l+Math.floor(Math.random()*(r-l+1))
+        swap(i,l);
+        animation.push([0,i,l])
+        let pvt=pivot(l,r)
+        randomizedQuickSort(l,pvt-1)
+        randomizedQuickSort(pvt+1,r)
     }
 }
 function pivot(l,r){
