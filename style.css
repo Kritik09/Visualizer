@@ -21,6 +21,9 @@ header{
     color: var(--color-white);
     text-align: center;
 }
+a{
+    text-decoration: none;
+}
 nav{
     display: flex;
     justify-content: space-around;
